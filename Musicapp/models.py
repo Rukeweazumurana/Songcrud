@@ -12,9 +12,9 @@ class Song(models.Model):
     title=models.CharField(max_length=50)
     date_released=models.DateField(default=datetime.today)
     likes=models.IntegerField()
-    singer_id=models.IntegerField()
+    artiste_id=models.IntegerField()
 
 class Lyric(models.Model):
     song = models.OneToOneField(Song, on_delete=models.CASCADE)
     content=models.CharField(max_length=500)
-    music_id=models.IntegerField()
+    song_id=models.IntegerField()
